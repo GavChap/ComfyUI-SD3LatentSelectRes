@@ -19,10 +19,10 @@ class SD3LatentSelectRes:
         }
 
     RETURN_TYPES = ("INT", "INT", "LATENT")
-    RETURN_NAMES = ("width", "height", "latent")
+    RETURN_NAMES = ("width", "height", "samples")
     FUNCTION = "return_res"
     OUTPUT_NODE = True
-    CATEGORY = "generate"
+    CATEGORY = "generate/sd3"
 
     def return_res(self, size_selected, batch_size):
         # Extract resolution name and dimensions using the key
@@ -30,7 +30,7 @@ class SD3LatentSelectRes:
         width = int(selected_info["width"])
         height = int(selected_info["height"])
         latent = torch.ones([batch_size, 16, height // 8, width // 8], device=self.device) * 0.0609
-        return (width, height, latent)
+        return {"width": width}, {"height": height}, {"samples": latent},
 
     @staticmethod
     def read_sizes():

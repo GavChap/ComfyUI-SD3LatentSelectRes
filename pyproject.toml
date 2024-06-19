@@ -9,6 +9,6 @@ Repository = "https://github.com/GavChap/ComfyUI-SD3LatentSelectRes"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "anymode"
 DisplayName = "ComfyUI-SD3LatentSelectRes"
 Icon = ""

@@ -14,7 +14,7 @@ class SD3LatentSelectRes:
         return {
             'required': {
                 'size_selected': (cls.size_sizes,),
-                'flip_ratio': ("BOOL")
+                'flip_ratio': ("BOOLEAN", {"default": False}),
                 'batch_size': ("INT", {"default": 1, "min": 1, "max": 4096})
             }
         }
@@ -54,7 +54,7 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SD3LatentSelectRes": "SD3 Select Latent Resolution"
+    "SD3LatentSelectRes": "SD3/Flux Select Latent Resolution"
 }
 
 

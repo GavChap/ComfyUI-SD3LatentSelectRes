@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-sd3latentselectres"
-description = "You'll get a new node called SD3 Latent Select Resolution, you can pick the x and y sizes from a list."
-version = "1.0.1"
+description = "You'll get a new node called SD3/Flux Latent Select Resolution, you can pick the x and y sizes from a list."
+version = "2.0.0"
 license = { file = "LICENSE" }
 
 [project.urls]
@@ -10,5 +10,5 @@ Repository = "https://github.com/GavChap/ComfyUI-SD3LatentSelectRes"
 
 [tool.comfy]
 PublisherId = "anymode"
-DisplayName = "ComfyUI-SD3LatentSelectRes"
+DisplayName = "SD3 and Flux Latent Select Resolution"
 Icon = ""

@@ -36,7 +36,7 @@ class SD3LatentSelectRes:
             height = int(selected_info["width"])
 
         latent = torch.ones([batch_size, 16, height // 8, width // 8], device=self.device) * 0.0609
-        return {"width": width}, {"height": height}, {"samples": latent},
+        return width, height, {"samples": latent},
 
     @staticmethod
     def read_sizes():
